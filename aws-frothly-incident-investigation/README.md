@@ -1,8 +1,19 @@
-````markdown
 # Frothly AWS Incident Investigation
 
 ## Project Overview
-This project analyzes Frothly's AWS environment logs using Splunk to answer key security and operational questions. It demonstrates the use of Splunk searches and log analysis techniques to investigate IAM user activity, S3 bucket access, system processor details, and endpoint characteristics.
+
+This project involves investigating Frothly's AWS environment by analyzing various log data ingested into Splunk. Using targeted Splunk queries and log analysis techniques, i examined IAM user activity, S3 bucket access events, server processor details, and endpoint information to answer specific security and operational questions.
+
+The goal is to demonstrate practical use of Splunk for cloud security monitoring and incident investigation, showcasing how to extract meaningful insights from large datasets.
+
+---
+
+## Methodology
+
+- **Data Sources:** AWS CloudTrail logs, S3 access logs, system logs, and endpoint telemetry ingested into Splunk.
+- **Tools Used:** Splunk Search Processing Language (SPL) for querying and extracting relevant events.
+- **Approach:** For each question, appropriate SPL queries were crafted to filter and extract data points such as IAM users, API call event IDs, bucket names, file uploads, hostnames, and OS details.
+- **Verification:** Results were cross-checked against multiple log sources for accuracy and completeness.
 
 ---
 
@@ -11,7 +22,7 @@ This project analyzes Frothly's AWS environment logs using Splunk to answer key 
 1. **List out the IAM users that accessed an AWS service (successfully or unsuccessfully) in Frothly's AWS environment?**
 
    - IAM Users:
-     - bstoll
+     - `bstoll`
 
 2. **What is the processor number used on the web servers?**
 
@@ -29,7 +40,7 @@ This project analyzes Frothly's AWS environment logs using Splunk to answer key 
 
    - File Name: `OPEN_BUCKET_PLEASE_FIX.txt`
 
-6. **What is the size (in mb) of the .tar.gz file that was successfully uploaded into the S3 bucket while it was publicly accessible?**
+6. **What is the size (in MB) of the `.tar.gz` file that was successfully uploaded into the S3 bucket while it was publicly accessible?**
 
    - Size: `2.93 MB`
 
@@ -40,6 +51,22 @@ This project analyzes Frothly's AWS environment logs using Splunk to answer key 
 8. **What is the FQDN of the endpoint that is running a different Windows operating system edition than the others?**
 
    - FQDN: `SEPM.froth.ly`
+
+---
+
+## Summary
+
+This investigation highlights the value of log analytics in cloud environments. By using Splunk's powerful search capabilities, we identified key security-relevant events, detected misconfigurations such as public S3 buckets, and pinpointed endpoints exhibiting unusual behavior (like cryptocurrency mining). The exercise reinforces best practices for continuous monitoring, incident response, and the importance of understanding AWS audit logs for security posture management.
+
+---
+
+## Author
+
+**Francis Olorunfemi Jacob**  
+Blue Team Cybersecurity Enthusiast  
+GitHub: [Femijay-code](https://github.com/Femijay-code)  
+Email: femijay123@gmail.com
+
 
 ---
 
