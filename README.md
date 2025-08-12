@@ -12,6 +12,9 @@ Analyzes Apache access logs using Splunk Search Processing Language (SPL). The p
 ### 🔹 [Dashboard Advanced Analysis](projects/dashboard-advanced-analysis)
 Leverages Splunk Dashboard Studio to create interactive visualizations and panels for insights into user login activity, time-based trends, and endpoint behavior, using advanced SPL queries and filters.
 
+### 🔹 [Frothly AWS Incident Investigation](projects/aws-frothly-incident-investigation)
+Investigates Frothly’s AWS environment logs using Splunk to answer security-focused questions. This project covers analyzing IAM user activity, S3 bucket access incidents, processor details, and endpoint behavior, including detection of cryptocurrency mining and OS edition discrepancies.
+
 ---
 
 ## 🛠️ Tools & Skills
